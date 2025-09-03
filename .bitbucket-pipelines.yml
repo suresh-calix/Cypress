@@ -1,0 +1,11 @@
+image: cypress/browsers:node18.12.0-chrome107-ff107
+
+pipelines:
+  default:
+    - step:
+        name: Run Cypress Tests
+        caches:
+          - node
+        script:
+          - npm install
+          - npm run cypress:run

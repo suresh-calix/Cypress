@@ -1,0 +1,13 @@
+{
+  "name": "calix-industry-standards-tests",
+  "version": "1.0.0",
+  "description": "Cypress test suite for Calix Industry Standards page",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^15.1.0"
+  }
+}
