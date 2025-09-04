@@ -8,6 +8,7 @@
     "cypress:open": "cypress open"
   },
   "devDependencies": {
-    "cypress": "^15.1.0"
+    "cypress": "^15.1.0",
+    "mochawesome": "^7.1.3"
   }
 }
