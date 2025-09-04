@@ -74,5 +74,14 @@ it('should access blogs in Perspectives on Industry section', () => {
 
 
 
- 
+  it('should click Learn More and redirect to Industry Associations page', () => {
+  cy.visit('/resources/industry-standards.html');
+
+  cy.get('#button-0add17ffda', { timeout: 10000 })
+    .scrollIntoView()
+    .should('exist') // skip visibility check
+    .click({ force: true }); // force click even if hidden
+
+  cy.url({ timeout: 10000 }).should('include', '/resources/industry-associations.html');
+});
 });
