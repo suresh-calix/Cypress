@@ -1,8 +1,17 @@
+
 const { defineConfig } = require('cypress');
+const getCompareSnapshotsPlugin = require('cypress-image-diff-js/plugin');
+
 module.exports = defineConfig({
   e2e: {
+    setupNodeEvents(on, config) {
+      return getCompareSnapshotsPlugin(on, config);
+    },
+
     baseUrl: 'https://www.calix.com',
-    specPattern: 'cypress/e2e/**/*.cy.js',
-    supportFile: 'cypress/support/e2e.js'
-  }
+    specPattern: 'cypress/e2e/**/*.spec.js',
+    supportFile: 'cypress/support/commands.js',
+    viewportWidth: 1280,
+    viewportHeight: 720,
+  },
 });

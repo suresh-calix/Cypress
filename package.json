@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "cypress": "^15.1.0",
+    "cypress-image-diff-js": "^2.4.0",
     "mochawesome": "^7.1.3"
   }
 }
