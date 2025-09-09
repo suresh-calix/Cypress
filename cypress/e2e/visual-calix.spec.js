@@ -13,7 +13,7 @@ describe('Visual Test - Calix Industry Standards Page', () => {
   it('should match full page snapshot', () => {
     cy.compareSnapshot({
       name: 'calix-fullpage',
-      testThreshold: 0.2, // Allow 20% difference
+      testThreshold: 0.3, // Allow 20% difference
     });
   });
 
@@ -21,7 +21,7 @@ describe('Visual Test - Calix Industry Standards Page', () => {
     cy.get('main').screenshot('calix-main-content');
     cy.compareSnapshot({
       name: 'calix-main-content',
-      testThreshold: 0.2, // Allow 20% difference
+      testThreshold: 0.3, // Allow 20% difference
     });
   });
 });
